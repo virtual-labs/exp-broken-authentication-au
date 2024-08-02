@@ -1,0 +1,56 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Why is it problematic if a web application allows users to modify their session cookies directly?",
+      "answers": {
+        "a": "It can lead to unauthorized access if users can impersonate others",
+        "b": "It makes the application slower",
+        "c": "It increases server storage requirements",
+        "d": "It complicates the user interface"
+      },
+      "explanations": {
+        "a": "Allowing users to modify their session cookies can lead to unauthorized access by letting users impersonate other accounts.<a href='https://owasp.org/www-community/vulnerabilities/Session_Fixation'>Learn more</a>",
+        "b": "Modifying cookies does not directly affect application speed.",
+        "c": "Session cookies do not impact server storage significantly.",
+        "d": "Modifying cookies does not affect the user interface."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a key security feature to protect session cookies from being accessed by malicious scripts?",
+      "answers": {
+        "a": "HttpOnly attribute",
+        "b": "Path attribute",
+        "c": "Domain attribute",
+        "d": "Max-Age attribute"
+      },
+      "explanations": {
+        "a": "The HttpOnly attribute prevents JavaScript from accessing the cookie, reducing the risk of session hijacking.<a href='https://owasp.org/www-community/HttpOnly'>Learn more</a>",
+        "b": "The Path attribute restricts the cookie to a specific URL path but does not protect against script access.",
+        "c": "The Domain attribute specifies which domains can receive the cookie but does not prevent script access.",
+        "d": "The Max-Age attribute defines the cookie’s expiration time but does not protect against script access."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "After modifying a session cookie to impersonate an admin, what should a secure web application do to prevent unauthorized actions?",
+      "answers": {
+        "a": "Validate user roles and permissions on the server-side",
+        "b": "Ignore the cookie modifications",
+        "c": "Allow all users to access admin features",
+        "d": "Re-encrypt the cookie"
+      },
+      "explanations": {
+        "a": "The web application should validate user roles and permissions server-side to ensure only authorized users can access admin features.<a href='https://owasp.org/www-community/Authentication_Flaws'>Learn more</a>",
+        "b": "Ignoring cookie modifications can lead to security breaches.",
+        "c": "Allowing all users access to admin features is a significant security risk.",
+        "d": "Re-encrypting the cookie does not prevent unauthorized access if proper validation is not in place."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
