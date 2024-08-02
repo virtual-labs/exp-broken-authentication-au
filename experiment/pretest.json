@@ -2,37 +2,54 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is a session cookie used for?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To store user authentication information",
+        "b": "To track user visits to a website",
+        "c": "To store website content",
+        "d": "To encrypt data on the server"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "A session cookie is used to store information about the user’s session, such as authentication data.<a href='https://www.techtarget.com/searchsecurity/definition/session-cookie'>Learn more</a>",
+        "b": "Tracking user visits is often done with tracking cookies, not specifically session cookies.",
+        "c": "Session cookies do not store website content.",
+        "d": "Session cookies are not used for data encryption."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What does 'base64 encoding' do to a cookie's data?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It makes the data readable but not secure",
+        "b": "It encrypts the data securely",
+        "c": "It compresses the data",
+        "d": "It makes the data unusable"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Base64 encoding makes data readable but does not secure it; it can be easily decoded.<a href='https://www.base64decode.org/'>Learn more</a>",
+        "b": "Base64 encoding does not provide security or encryption.",
+        "c": "Base64 encoding does not compress data.",
+        "d": "Base64 encoding does not make data unusable."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What should be done to prevent session cookie manipulation?",
+      "answers": {
+        "a": "Use secure cookie attributes and server-side validation",
+        "b": "Allow cookies to be edited by users",
+        "c": "Use plain text for cookie storage",
+        "d": "Ignore session cookies"
+      },
+      "explanations": {
+        "a": "Using secure cookie attributes and validating session data on the server side can prevent unauthorized access.<a href='https://owasp.org/www-community/HttpOnly'>Learn more</a>",
+        "b": "Cookies should not be editable by users to prevent manipulation.",
+        "c": "Plain text storage of cookies is insecure.",
+        "d": "Session cookies should not be ignored; they are crucial for maintaining session security."
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
