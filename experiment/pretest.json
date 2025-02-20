@@ -51,6 +51,57 @@
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which attribute prevents JavaScript from accessing session cookies?",
+      "answers": {
+        "a": "HttpOnly",
+        "b": "Secure",
+        "c": "SameSite",
+        "d": "Path"
+      },
+      "explanations": {
+        "a": "The HttpOnly attribute prevents JavaScript from accessing cookies, reducing the risk of cross-site scripting (XSS) attacks.<a href='https://owasp.org/www-community/HttpOnly'>Learn more</a>",
+        "b": "The Secure attribute ensures cookies are sent only over HTTPS but does not prevent JavaScript access.",
+        "c": "SameSite helps prevent cross-site request forgery (CSRF) but does not restrict JavaScript access.",
+        "d": "The Path attribute defines where the cookie is valid but does not restrict JavaScript access."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How can an application prevent session fixation attacks?",
+      "answers": {
+        "a": "Regenerate session IDs after login",
+        "b": "Use predictable session IDs",
+        "c": "Allow session IDs to be set manually",
+        "d": "Store session IDs in local storage"
+      },
+      "explanations": {
+        "a": "Regenerating session IDs after login prevents attackers from setting a fixed session ID for a victim.<a href='https://owasp.org/www-community/attacks/Session_fixation'>Learn more</a>",
+        "b": "Predictable session IDs can be guessed by attackers, making them insecure.",
+        "c": "Allowing manual setting of session IDs exposes them to manipulation.",
+        "d": "Storing session IDs in local storage makes them vulnerable to cross-site scripting (XSS) attacks."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why should the Secure attribute be used with session cookies?",
+      "answers": {
+        "a": "To ensure cookies are only sent over HTTPS",
+        "b": "To prevent JavaScript from accessing cookies",
+        "c": "To extend the cookie expiration time",
+        "d": "To allow cookies across multiple domains"
+      },
+      "explanations": {
+        "a": "The Secure attribute ensures cookies are only sent over HTTPS, preventing interception over unsecured connections.<a href='https://owasp.org/www-community/controls/SecureCookieAttribute'>Learn more</a>",
+        "b": "The HttpOnly attribute prevents JavaScript access, not Secure.",
+        "c": "Cookie expiration is controlled by the Expires or Max-Age attributes, not Secure.",
+        "d": "Cross-domain cookie behavior is controlled by the Domain attribute, not Secure."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     }
   ]
 }
