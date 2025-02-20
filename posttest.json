@@ -1,0 +1,107 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Why is it problematic if a web application allows users to modify their session cookies directly?",
+      "answers": {
+        "a": "It can lead to unauthorized access if users can impersonate others",
+        "b": "It makes the application slower",
+        "c": "It increases server storage requirements",
+        "d": "It complicates the user interface"
+      },
+      "explanations": {
+        "a": "Allowing users to modify their session cookies can lead to unauthorized access by letting users impersonate other accounts.<a href='https://owasp.org/www-community/vulnerabilities/Session_Fixation'>Learn more</a>",
+        "b": "Modifying cookies does not directly affect application speed.",
+        "c": "Session cookies do not impact server storage significantly.",
+        "d": "Modifying cookies does not affect the user interface."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is a key security feature to protect session cookies from being accessed by malicious scripts?",
+      "answers": {
+        "a": "HttpOnly attribute",
+        "b": "Path attribute",
+        "c": "Domain attribute",
+        "d": "Max-Age attribute"
+      },
+      "explanations": {
+        "a": "The HttpOnly attribute prevents JavaScript from accessing the cookie, reducing the risk of session hijacking.<a href='https://owasp.org/www-community/HttpOnly'>Learn more</a>",
+        "b": "The Path attribute restricts the cookie to a specific URL path but does not protect against script access.",
+        "c": "The Domain attribute specifies which domains can receive the cookie but does not prevent script access.",
+        "d": "The Max-Age attribute defines the cookie’s expiration time but does not protect against script access."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "After modifying a session cookie to impersonate an admin, what should a secure web application do to prevent unauthorized actions?",
+      "answers": {
+        "a": "Validate user roles and permissions on the server-side",
+        "b": "Ignore the cookie modifications",
+        "c": "Allow all users to access admin features",
+        "d": "Re-encrypt the cookie"
+      },
+      "explanations": {
+        "a": "The web application should validate user roles and permissions server-side to ensure only authorized users can access admin features.<a href='https://owasp.org/www-community/Authentication_Flaws'>Learn more</a>",
+        "b": "Ignoring cookie modifications can lead to security breaches.",
+        "c": "Allowing all users access to admin features is a significant security risk.",
+        "d": "Re-encrypting the cookie does not prevent unauthorized access if proper validation is not in place."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which attribute should be enabled to ensure cookies are only sent over HTTPS?",
+      "answers": {
+        "a": "Secure attribute",
+        "b": "HttpOnly attribute",
+        "c": "SameSite attribute",
+        "d": "Domain attribute"
+      },
+      "explanations": {
+        "a": "The Secure attribute ensures that cookies are only sent over HTTPS, preventing interception over unsecured connections.<a href='https://owasp.org/www-community/controls/SecureCookieAttribute'>Learn more</a>",
+        "b": "HttpOnly prevents JavaScript access but does not enforce HTTPS.",
+        "c": "SameSite prevents cross-site request forgery (CSRF) but does not enforce HTTPS.",
+        "d": "Domain defines which domains can receive the cookie but does not enforce HTTPS."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How can an application prevent session fixation attacks?",
+      "answers": {
+        "a": "Regenerate session IDs after login",
+        "b": "Use weak session IDs",
+        "c": "Allow users to reuse session tokens",
+        "d": "Store session IDs in local storage"
+      },
+      "explanations": {
+        "a": "Regenerating session IDs after login prevents attackers from setting a fixed session ID for a victim.<a href='https://owasp.org/www-community/attacks/Session_fixation'>Learn more</a>",
+        "b": "Weak session IDs make it easier to predict or guess a valid session.",
+        "c": "Allowing reuse of session tokens increases the risk of fixation attacks.",
+        "d": "Storing session IDs in local storage exposes them to JavaScript-based attacks."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the main purpose of the SameSite cookie attribute?",
+      "answers": {
+        "a": "To prevent cross-site request forgery (CSRF) attacks",
+        "b": "To encrypt cookies",
+        "c": "To allow cookies across multiple domains",
+        "d": "To set an expiration date for cookies"
+      },
+      "explanations": {
+        "a": "The SameSite attribute prevents browsers from sending cookies with cross-site requests, helping prevent CSRF attacks.<a href='https://owasp.org/www-community/SameSite'>Learn more</a>",
+        "b": "Cookies are not encrypted by SameSite; encryption requires Secure or encryption techniques.",
+        "c": "SameSite restricts cookies to first-party requests, not cross-domain usage.",
+        "d": "Max-Age or Expires attributes define cookie expiration, not SameSite."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
