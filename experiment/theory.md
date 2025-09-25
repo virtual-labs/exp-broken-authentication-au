@@ -1,4 +1,4 @@
-### Theory
+
 
 #### Overview of Broken Authentication
 **Broken Authentication** occurs when an application fails to correctly implement authentication or session management. This can allow attackers to bypass login mechanisms, hijack sessions, or gain access to sensitive accounts or functionality (like administrative dashboards).  
