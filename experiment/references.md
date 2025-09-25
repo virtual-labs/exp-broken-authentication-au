@@ -1,4 +1,3 @@
-### References
 
 1. OWASP Foundation, *Authentication Cheat Sheet*, OWASP, 2023. [Online]. Available: [https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
